@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public float speed , torqueSpeed;
     bool angleCheck, velocityCheck;
     [SerializeField] Transform winText, lostText;
+        bool didntCrash = true;
 
 
     void Start()
@@ -60,7 +61,6 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        bool didntCrash = true;
         Debug.Log("Landed");
         if (angleCheck && velocityCheck && didntCrash)
         {
